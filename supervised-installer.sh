@@ -112,9 +112,6 @@ if [[ "$answer" =~ "y" ]] || [[ "$answer" =~ "Y" ]]; then
     curl -sL "${URL_INTERFACES}" > "${FILE_INTERFACES}";
 fi
 
-info "Restarting NetworkManager"
-systemctl restart "${SERVICE_NM}"
-
 # Parse command line parameters
 while [[ $# -gt 0 ]]; do
     arg="$1"
